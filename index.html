@@ -154,12 +154,41 @@ nav{
 .hero-tagline strong{color:var(--cream);font-weight:500;}
 
 .hero-scroll-hint{
-  position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
+  position:absolute;
+  bottom:30px;
+  left:0;
+  right:0;
+  margin:0 auto;
+  width:fit-content;
   font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--muted);z-index:2;
-  display:flex;flex-direction:column;align-items:center;gap:10px;
-  opacity:0;animation:riseIn 1s 1.4s forwards;
+  font-size:.68rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  opacity:0;
+  animation:riseIn 1s 1.4s forwards;
+}
+
+/* Better mobile positioning */
+@media(max-width:768px){
+  .hero-scroll-hint{
+    bottom:20px;
+  }
+}
+
+@media(max-width:400px){
+  .hero-scroll-hint{
+    bottom:15px;
+    font-size:.6rem;
+  }
+  .scroll-line{
+    height:35px;
+  }
 }
 .scroll-line{
   width:1px;height:48px;
